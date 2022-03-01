@@ -99,8 +99,8 @@ const PropertyDetails = ({
 
 export default PropertyDetails;
 
-export const getServerSideProps: GetServerSideProps = async ({ params: { id } }) => {
-  const data = await fetchApi(`${baseUrl}/properties/detail?externalID=${id}`);
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const data = await fetchApi(`${baseUrl}/properties/detail?externalID=${context.params?.id}`);
 
   return {
     props: {

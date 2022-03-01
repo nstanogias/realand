@@ -11,7 +11,7 @@ import noresult from '../assets/images/noresult.svg';
 const SearchFilters = () => {
   const [filters] = useState(filterData);
   const [searchTerm, setSearchTerm] = useState('');
-  const [locationData, setLocationData] = useState();
+  const [locationData, setLocationData] = useState<any[]>();
   const [showLocations, setShowLocations] = useState(false);
   const [loading, setLoading] = useState(false);
   const router = useRouter();
